@@ -12,7 +12,7 @@ I changed my hypothesis to an accident.
 Half an hour later, I'm still sitting duck. Many cars started to turn around but I got out my car and ran to the front.
 This is what I saw:
 
-![high rides with water washing over 520](https://www.dropbox.com/s/xf220huv1nd81a9/2013-11-02%2011.30.08.jpg)
+![high rides with water washing over 520](https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/d5qWtDLffW/2013-11-02%2011.30.08.jpg)
 
 The wind was so strong and the tides were so high, water was washing over the bridge, and it is a hazard to drive
 on the bidge. As a safety concern, WADOT closed down 520.
