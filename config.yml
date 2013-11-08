@@ -3,12 +3,12 @@
 
 # This helps parsers (and hosting platforms) determine which version is needed to compile your site.
 # If you compile your blog yourself, setting this won't matter, but it's a nice thing to keep updated.
-RuhohSpec: "2.1"
+RuhohSpec: "2.5"
 
 # Used for things like RSS that need the full URL to a given resource.
 # This DOES NOT affect any of your paths or links in any way.
 # This DOES NOT configure domain mapping. See post2.ruhoh.com for hosting options.
-production_url: "http://sample.com"
+production_url: "http://will.iamchen.com"
 
 # Intelligently prepends all urls in the system with the given base_path.
 # This allows you to host your blog in a subdirectory of a given website.
@@ -16,7 +16,7 @@ production_url: "http://sample.com"
 #  To host at the path: http://myuniversity.edu/staff/me/~/blog.
 #  set base_path: "/staff/me/~/blog"
 # NOTE: base_path is never added in development mode (for convenience).
-base_path: "/"
+base_path: "/blog"
 
 # Tell ruhoh which folder will model the "theme"
 twitter :
@@ -74,7 +74,7 @@ widgets :
   analytics :
     use : google
     # -- config for google --
-    tracking_id : 'UA-123-12'
+    tracking_id : 'UA-251075-12'
 
     # -- config for getclicky  --
     # site_id :
@@ -83,7 +83,7 @@ widgets :
     use : disqus
     enable : true
     # -- config for disqus --
-    short_name : jekyllbootstrap # Change This!
+    short_name : wwchen
 
     # -- config for livefyre --
     # site_id : 123

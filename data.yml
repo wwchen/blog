@@ -1,11 +1,11 @@
-title : Blog Title
-tagline: Blog Tagline
+title : William Chen
+tagline: Random musings, projects, and whatever the hell I want
 author :
-  name : Firstname Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : William Chen
+  email : will@iamchen.com
+  github : wwchen
+  twitter : wchen
+  # feedburner : feedname
 
 navigation :
   - archive
