@@ -2,7 +2,7 @@
 title: 'High winds at Seattle this morning'
 date: '2013-11-02'
 description:
-tags: []
+tags: [seattle, weather, wa520, wind]
 ---
 
 Crazy weather in Seattle this morning: I hopped on 520 close to noon, and not long after I was stuck in standstill.
