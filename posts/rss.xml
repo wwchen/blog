@@ -4,7 +4,7 @@
     <title>William Chen</title>
     <description>William Chen</description>
     <link>http://sample.com</link>
-    <pubDate>2013-11-08</pubDate>
+    <pubDate>2013-11-09</pubDate>
     <item>
       <title>High winds at Seattle this morning</title>
       <link>http://sample.com/blog/high-winds-at-seattle-this-morning</link>
@@ -23,6 +23,121 @@ on the bidge. As a safety concern, WADOT closed down 520.
 Later in the day, KOMO News reported some pretty &lt;a href="http://www.komonews.com/news/local/Novembers-first-storm-ravages-Western-Washington-230347191.html"&gt;serious damage&lt;/a&gt; caused by the high winds&lt;/p&gt;
 
 &lt;p&gt;Crazy. o.o&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Building a charliecube</title>
+      <link>http://sample.com/blog/building-a-charliecube</link>
+      <pubDate>2013-10-24</pubDate>
+      <description>&lt;p&gt;I first learned about Charliecube when I visited &lt;a href="http://metrixcreatespace.com/" title="A hackerspace in Captiol Hill"&gt;Metrix&lt;/a&gt;. Seeing the color LEDs going through
+different patterns was very mesmerizing, and I committed myself to building one. It would be my
+first hardware project, and apart from many, many tedious soldering, the project itself isn&amp;#39;t very
+difficult. Soldering 320 joints consistently and efficiently? Challenge accepted!&lt;/p&gt;
+
+&lt;p&gt;Fortunately, the build steps have already been &lt;a href="http://aglick.com/charliecube.html"&gt;documented&lt;/a&gt;, so all I need to do is follow
+his build steps. I thought about extending to 5x5 cube, but I&amp;#39;d have to redesign the wiring, arduino
+programming, and get a board that has 25 pins (i.e. not Uno), I decided to improvise after I got the
+basics down.&lt;/p&gt;
+
+&lt;h3 id="toc_0"&gt;Build of Materials&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;64 common cathode color LEDs. (I sourced 100 pcs for $12 on &lt;a href="http://www.ebay.com/itm/-/281111473484"&gt;eBay&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Steel wires (I bought a spool of 20 AWG at &lt;a href="http://www.lowes.com/pd_62934-37672-122040_0"&gt;Lowes&lt;/a&gt;, but I would recommend 24 or 26 AWG)&lt;/li&gt;
+&lt;li&gt;Arduino (I used an Uno, but any will do)&lt;/li&gt;
+&lt;li&gt;Solder&lt;/li&gt;
+&lt;li&gt;Plastic or wood for the base&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="toc_1"&gt;Tools and Equipment&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Soldering iron&lt;/li&gt;
+&lt;li&gt;Laser cutter (optional)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Throughout the building exercise, I wanted everything done consistently, and there were some
+challenges in doing so..&lt;/p&gt;
+
+&lt;h3 id="toc_2"&gt;Step-by-step&lt;/h3&gt;
+
+&lt;h4 id="toc_3"&gt;Step 1: Measure and straighten the wire&lt;/h4&gt;
+
+&lt;p&gt;I wanted my LEDs to be 36 mm apart, and that same distant apart from the base, I calculated I needed
+the steel wires to be at least 144 mm long. Giving myself some room for error, I snipped them at
+180 mm. Now comes the hard part - straightening them out. The 20-gauge galvanized steel wire was too
+thick to straighten out just by &lt;a href="http://www.youtube.com/watch?v=kReKXUwFNmE" title="How to Straighten Wire"&gt;tensioning&lt;/a&gt; it, or &lt;a href="http://www.youtube.com/watch?v=l4oUU2uMD4Y" title="How to Straighten Metal Wires"&gt;twisting&lt;/a&gt; it. Sooo, reluctantly, 
+I manually straightened them out with pliers, and to make it all less of a drag, I entertained
+myself with a few episodes of Friends while doing it, so I wouldn&amp;#39;t mind it so much.&lt;/p&gt;
+
+&lt;h4 id="toc_4"&gt;Step 2: Bending the LED leads&lt;/h4&gt;
+
+&lt;p&gt;Because this is a RGB LED, there are &lt;a href="http://aglick.com/charliecube/howtobuild/vlcsnap-2011-12-27-16h05m36s2.png"&gt;four leads&lt;/a&gt; - red, green, blue, and common cathode. I
+identified the flat edge, and faced that side up. With a point of reference, I bent the leads
+&lt;a href="http://aglick.com/charliecube/howtobuild/vlcsnap-2011-12-27-16h07m21s74.png"&gt;like so&lt;/a&gt;. But honestly, any way will do - just do it consistently. Again, Friends helped
+me through this difficult time.&lt;/p&gt;
+
+&lt;h4 id="toc_5"&gt;Step 3: Soldering&lt;/h4&gt;
+
+&lt;p&gt;This is arguably the most tedious part. 64 LEDs, soldered onto 64 wires. Each column of LEDs will
+have 16 joints. 16 of those columns, you get 256 joints to solder. They all have to be equidistant
+from each other, as well as from the steel wire. Marking the wires at 36 mm apart and using helper
+hands just ain&amp;#39;t gonna cut the accuracy and repeatability I wanted to achieve. I&amp;#39;ll spare you the
+details, but I&amp;#39;ve tried using Pringles can, cardboard cutout, and steel plates before coming to a
+&amp;#39;workstation&amp;#39;, if you will, that I designed and laser cut.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/mLkXJ5kKtx/2013-11-08%2023.05.31.jpg" alt="assembled"&gt;
+&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/xqeoZ5Q6VN/2013-11-08%2023.04.48.jpg" alt="disassembled"&gt;&lt;/p&gt;
+
+&lt;p&gt;In its simplicity, it is a rectangular box with detachable walls. The top and bottom are cut with
+holes to fit a LED and wires. After four solders, one unit of the sides is taken off, and another
+round of soldering can commence.&lt;/p&gt;
+
+&lt;h4 id="toc_6"&gt;Step 4: Snip off excess wires&lt;/h4&gt;
+
+&lt;p&gt;After a round of hard work comes the easy part - snip off all the excess leads and wires!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/rtdFdey9oD/2013-10-21%2001.13.31-2.jpg" alt="unsnipped"&gt;
+&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/J3kG49Q2Px/2013-10-27%2020.17.17.jpg" alt="snipped"&gt;&lt;/p&gt;
+
+&lt;h4 id="toc_7"&gt;Step 5: Make a base for all those LEDs&lt;/h4&gt;
+
+&lt;p&gt;The &lt;a href="http://aglick.com/charliecube.html"&gt;build instructions&lt;/a&gt; I followed used a breadboard. I wanted something more permanent and
+more visually appealing. So I laser cut a wooden box:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/u2InfkPtjw/2013-10-22%2023.40.33.jpg" alt="wood-box-exploded"&gt;
+&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/KIcxETH8KI/2013-10-22%2023.41.28.jpg" alt="wood-box"&gt;
+&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/6qgAhW9P05/2013-10-22%2023.49.58.jpg" alt="wood-box-leds"&gt;&lt;/p&gt;
+
+&lt;p&gt;(Though it wasn&amp;#39;t long after I decided to go with acrylic.)&lt;/p&gt;
+
+&lt;h4 id="toc_8"&gt;Step 6: Wiring all the spires together&lt;/h4&gt;
+
+&lt;p&gt;I measured out the distance the spires are apart from the base, then I used hot glue to fix them in
+place. After that, I wired the spires together, according to the &lt;a href="http://aglick.com/charliecube.html"&gt;build instructions&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/E_Yolbs_R7/2013-10-24%2019.23.33.jpg" alt="hot-glued-base"&gt;
+&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/K5Xzn_MkrC/2013-10-24%2020.56.14.jpg" alt="hot-glue-closeup"&gt;
+&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/FZzwzP-O4P/2013-10-24%2021.41.18.jpg" alt="wiring-1"&gt;
+&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/bc86kKd8v1/2013-10-24%2022.15.39.jpg" alt="wiring-2"&gt;
+Piping hot mess!&lt;/p&gt;
+
+&lt;h4 id="toc_9"&gt;Step 7: The moment of truth&lt;/h4&gt;
+
+&lt;p&gt;Up until this point, I had no idea if I did all the solderings correctly. I eagerly hooked all the
+wires up to the arduno, and vo&#xEE;la!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/k3amE8Dv4v/2013-10-25%2020.25.30.jpg" alt="demo"&gt;
+(That&amp;#39;s Emily in the background. Ross&amp;#39;s ex-wife)&lt;/p&gt;
+
+&lt;h4 id="toc_10"&gt;Step 8: Clean up&lt;/h4&gt;
+
+&lt;p&gt;Putting the icing on the cake, the bow on the present, I made a clear arclyic case for it&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/Y6oVNC4WRV/2013-10-29%2001.07.17.jpg" alt="final-1"&gt;
+&lt;img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/LCwIWVd7BB/2013-10-29%2001.08.10.jpg" alt="final-2"&gt;&lt;/p&gt;
+
+&lt;p&gt;And we&amp;#39;re done!&lt;/p&gt;
 </description>
     </item>
   </channel>

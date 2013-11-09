@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Building a charliecube</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="William Chen">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+<link href='/blog/assets/stylesheets/bootstrap.min-88238289010db19359d2181e634e95cd.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/blog/assets/stylesheets/style-e81fa375b231bedf6cb2dbc6653570cc.css' type='text/css' rel='stylesheet' media='all'>
+<link href='/blog/assets/stylesheets/google_prettify/sons-of-obsidian-afb0925bfa2d994f17dab93e13fbf999.css' type='text/css' rel='stylesheet' media='all'>
+    <!-- Le fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="/blog/">William Chen</a>
+          <ul class="nav">
+              
+                <li><a href="/blog/archive">Archive</a></li>
+              
+              
+                <li><a href="/blog/tags">Tags</a></li>
+              
+              
+                <li><a href="/blog/categories">Categories</a></li>
+              
+              
+                <li><a href="/blog/pages">Pages</a></li>
+              
+              
+                <li><a href="/blog/about">About Me</a></li>
+              
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+<div class="page-header">
+  <h1>Building a charliecube </h1>
+</div>
+
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>2013-10-24</strong>
+    </div>
+    <div class="content">
+      <p>I first learned about Charliecube when I visited <a href="http://metrixcreatespace.com/" title="A hackerspace in Captiol Hill">Metrix</a>. Seeing the color LEDs going through
+different patterns was very mesmerizing, and I committed myself to building one. It would be my
+first hardware project, and apart from many, many tedious soldering, the project itself isn&#39;t very
+difficult. Soldering 320 joints consistently and efficiently? Challenge accepted!</p>
+
+<p>Fortunately, the build steps have already been <a href="http://aglick.com/charliecube.html">documented</a>, so all I need to do is follow
+his build steps. I thought about extending to 5x5 cube, but I&#39;d have to redesign the wiring, arduino
+programming, and get a board that has 25 pins (i.e. not Uno), I decided to improvise after I got the
+basics down.</p>
+
+<h3 id="toc_0">Build of Materials</h3>
+
+<ul>
+<li>64 common cathode color LEDs. (I sourced 100 pcs for $12 on <a href="http://www.ebay.com/itm/-/281111473484">eBay</a>)</li>
+<li>Steel wires (I bought a spool of 20 AWG at <a href="http://www.lowes.com/pd_62934-37672-122040_0">Lowes</a>, but I would recommend 24 or 26 AWG)</li>
+<li>Arduino (I used an Uno, but any will do)</li>
+<li>Solder</li>
+<li>Plastic or wood for the base</li>
+</ul>
+
+<h3 id="toc_1">Tools and Equipment</h3>
+
+<ul>
+<li>Soldering iron</li>
+<li>Laser cutter (optional)</li>
+</ul>
+
+<p>Throughout the building exercise, I wanted everything done consistently, and there were some
+challenges in doing so..</p>
+
+<h3 id="toc_2">Step-by-step</h3>
+
+<h4 id="toc_3">Step 1: Measure and straighten the wire</h4>
+
+<p>I wanted my LEDs to be 36 mm apart, and that same distant apart from the base, I calculated I needed
+the steel wires to be at least 144 mm long. Giving myself some room for error, I snipped them at
+180 mm. Now comes the hard part - straightening them out. The 20-gauge galvanized steel wire was too
+thick to straighten out just by <a href="http://www.youtube.com/watch?v=kReKXUwFNmE" title="How to Straighten Wire">tensioning</a> it, or <a href="http://www.youtube.com/watch?v=l4oUU2uMD4Y" title="How to Straighten Metal Wires">twisting</a> it. Sooo, reluctantly, 
+I manually straightened them out with pliers, and to make it all less of a drag, I entertained
+myself with a few episodes of Friends while doing it, so I wouldn&#39;t mind it so much.</p>
+
+<h4 id="toc_4">Step 2: Bending the LED leads</h4>
+
+<p>Because this is a RGB LED, there are <a href="http://aglick.com/charliecube/howtobuild/vlcsnap-2011-12-27-16h05m36s2.png">four leads</a> - red, green, blue, and common cathode. I
+identified the flat edge, and faced that side up. With a point of reference, I bent the leads
+<a href="http://aglick.com/charliecube/howtobuild/vlcsnap-2011-12-27-16h07m21s74.png">like so</a>. But honestly, any way will do - just do it consistently. Again, Friends helped
+me through this difficult time.</p>
+
+<h4 id="toc_5">Step 3: Soldering</h4>
+
+<p>This is arguably the most tedious part. 64 LEDs, soldered onto 64 wires. Each column of LEDs will
+have 16 joints. 16 of those columns, you get 256 joints to solder. They all have to be equidistant
+from each other, as well as from the steel wire. Marking the wires at 36 mm apart and using helper
+hands just ain&#39;t gonna cut the accuracy and repeatability I wanted to achieve. I&#39;ll spare you the
+details, but I&#39;ve tried using Pringles can, cardboard cutout, and steel plates before coming to a
+&#39;workstation&#39;, if you will, that I designed and laser cut.</p>
+
+<p><img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/mLkXJ5kKtx/2013-11-08%2023.05.31.jpg" alt="assembled">
+<img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/xqeoZ5Q6VN/2013-11-08%2023.04.48.jpg" alt="disassembled"></p>
+
+<p>In its simplicity, it is a rectangular box with detachable walls. The top and bottom are cut with
+holes to fit a LED and wires. After four solders, one unit of the sides is taken off, and another
+round of soldering can commence.</p>
+
+<h4 id="toc_6">Step 4: Snip off excess wires</h4>
+
+<p>After a round of hard work comes the easy part - snip off all the excess leads and wires!</p>
+
+<p><img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/rtdFdey9oD/2013-10-21%2001.13.31-2.jpg" alt="unsnipped">
+<img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/J3kG49Q2Px/2013-10-27%2020.17.17.jpg" alt="snipped"></p>
+
+<h4 id="toc_7">Step 5: Make a base for all those LEDs</h4>
+
+<p>The <a href="http://aglick.com/charliecube.html">build instructions</a> I followed used a breadboard. I wanted something more permanent and
+more visually appealing. So I laser cut a wooden box:</p>
+
+<p><img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/u2InfkPtjw/2013-10-22%2023.40.33.jpg" alt="wood-box-exploded">
+<img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/KIcxETH8KI/2013-10-22%2023.41.28.jpg" alt="wood-box">
+<img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/6qgAhW9P05/2013-10-22%2023.49.58.jpg" alt="wood-box-leds"></p>
+
+<p>(Though it wasn&#39;t long after I decided to go with acrylic.)</p>
+
+<h4 id="toc_8">Step 6: Wiring all the spires together</h4>
+
+<p>I measured out the distance the spires are apart from the base, then I used hot glue to fix them in
+place. After that, I wired the spires together, according to the <a href="http://aglick.com/charliecube.html">build instructions</a></p>
+
+<p><img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/E_Yolbs_R7/2013-10-24%2019.23.33.jpg" alt="hot-glued-base">
+<img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/K5Xzn_MkrC/2013-10-24%2020.56.14.jpg" alt="hot-glue-closeup">
+<img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/FZzwzP-O4P/2013-10-24%2021.41.18.jpg" alt="wiring-1">
+<img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/bc86kKd8v1/2013-10-24%2022.15.39.jpg" alt="wiring-2">
+Piping hot mess!</p>
+
+<h4 id="toc_9">Step 7: The moment of truth</h4>
+
+<p>Up until this point, I had no idea if I did all the solderings correctly. I eagerly hooked all the
+wires up to the arduno, and voîla!</p>
+
+<p><img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/k3amE8Dv4v/2013-10-25%2020.25.30.jpg" alt="demo">
+(That&#39;s Emily in the background. Ross&#39;s ex-wife)</p>
+
+<h4 id="toc_10">Step 8: Clean up</h4>
+
+<p>Putting the icing on the cake, the bow on the present, I made a clear arclyic case for it</p>
+
+<p><img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/Y6oVNC4WRV/2013-10-29%2001.07.17.jpg" alt="final-1">
+<img src="https://dl.dropboxusercontent.com/sh/2fnroo8xhxgsj4h/LCwIWVd7BB/2013-10-29%2001.08.10.jpg" alt="final-2"></p>
+
+<p>And we&#39;re done!</p>
+
+    </div>
+    <ul class="tag_box inline">
+      <li><i class="icon-folder-open"></i></li>
+    </ul>
+    <ul class="tag_box inline">
+      <li><i class="icon-tags"></i></li>
+      <li>
+        <a href="/blog/tags#charliecube-ref">charliecube <span>1</span></a>
+      </li>
+      <li>
+        <a href="/blog/tags#solder-ref">solder <span>1</span></a>
+      </li>
+      <li>
+        <a href="/blog/tags#arduino-ref">arduino <span>1</span></a>
+      </li>
+      <li>
+        <a href="/blog/tags#hardware-ref">hardware <span>1</span></a>
+      </li>
+      <li>
+        <a href="/blog/tags#project-ref">project <span>1</span></a>
+      </li>
+      <li>
+        <a href="/blog/tags#led-ref">led <span>1</span></a>
+      </li>
+      <li>
+        <a href="/blog/tags#cube-ref">cube <span>1</span></a>
+      </li>
+    </ul>
+    <hr>
+    <div class="pagination">
+      <ul>
+          <li class="prev disabled"><a>&larr; Previous</a></li>
+
+          <li><a href="/blog/archive">Archive</a></li>
+
+          <li class="next"><a href="/blog/high-winds-at-seattle-this-morning" title="High winds at Seattle this morning">Next &rarr;</a></li>
+      </ul>
+    </div>
+    <hr>
+    <div id="disqus_thread"></div>
+<script>
+    var disqus_developer = 1;
+    var disqus_shortname = 'wwchen'; // required: replace example with your forum shortname
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
+  </div>
+</div>
+
+
+      </div>
+
+      <hr>
+      <div class="footer">
+        <p>&copy; William Chen 2013
+          with help from <a href="http://ruhoh.com" target="_blank" title="The Definitive Technical Blogging Framework">ruhoh</a>
+          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Google Prettify -->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"></script>
+<script>
+  var pres = document.getElementsByTagName("pre");
+  for (var i=0; i < pres.length; ++i) {
+    pres[i].className = "prettyprint linenums";
+  }
+  prettyPrint();
+</script>
+<!-- end Google Prettify -->
+    <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-251075-12']);
+  _gaq.push(['_trackPageview']);
+  
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+
+    
+  </body>
+</html>
