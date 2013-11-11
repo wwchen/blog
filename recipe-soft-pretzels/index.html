@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Powershell one-liners</title>
+    <title>Recipe: Soft Pretzels</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="William Chen">
 
@@ -56,7 +56,7 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>Powershell one-liners </h1>
+  <h1>Recipe: Soft Pretzels </h1>
 </div>
 
 <div class="row-fluid post-full">
@@ -65,43 +65,36 @@
       <span>2013-11-10</strong>
     </div>
     <div class="content">
-      <p>Over the past year working at Microsoft, I&#39;ve grown some appreciation of PowerShell. I live and
-breathe in Mac and Linux environments with a terminal console, so not having an equivalency in
-Windows was suffocating me. <code>cmd</code> makes me want to rage quit, so don&#39;t get me started.</p>
+      <h1 id="toc_0">Homemade Soft Pretzels</h1>
 
-<p>I came across this <a href="http://www.bashedupbits.com/2013/11/powershell-one-liners.html">gem</a>, and some will proof its usefulness </p>
+<p><a href="http://foodnetwork.mobi/quickPage.html?page=24236&amp;cc=recipeDetails.html%3Frid%3D37073%26tn%3D%26p%3Ds%26s%3D0%26kw%3DSoft%2Bpretzels%26rs%3D">source</a>
+<img src="http://img.foodnetwork.com/FOOD/2011/11/22/FN_pretzels-005_s4x3_e.jpg" alt="image"></p>
 
-<p>Open <code>Document.pdf</code>, like <code>open</code> command in Mac.</p>
+<h3 id="toc_1">Ingredients</h3>
 
-<pre><code>Invoke-Item Document.pdf
-</code></pre>
+<ul>
+<li>1 1/2 cups warm (110 to 115 degrees F) water</li>
+<li>1 tablespoon sugar</li>
+<li>2 teaspoons kosher salt</li>
+<li>1 package active dry yeast</li>
+<li>22 ounces all-purpose flour, approximately 4 1/2 cups</li>
+<li>2 ounces unsalted butter, melted</li>
+<li>Vegetable oil, for pan</li>
+<li>10 cups water</li>
+<li>2/3 cup baking soda</li>
+<li>1 large egg yolk beaten with 1 tablespoon water</li>
+<li>Pretzel salt</li>
+</ul>
 
-<p>Stop all processes with matching name (Chrome, in this case)</p>
+<h3 id="toc_2">Steps</h3>
 
-<pre><code>Stop-Process -processname chrome*
-</code></pre>
-
-<p>Find all &quot;exe&quot; files in a tree, list their full path, and sort &quot;fullname&quot;:</p>
-
-<pre><code>Get-ChildItem &#39;C:\Tree\Of\Files\&#39; -recurse -include *.exe | select-object fullname | sort fullname | more
-</code></pre>
-
-<p>Find all mp3s and sort by ascending size:</p>
-
-<pre><code>Get-ChildItem &#39;C:\Tree\Of\Files\&#39; -recurse -include *.mp3 | select-object fullname,length | sort length
-</code></pre>
-
-<p>Start an interactive PowerShell session on the remote computer myserver:</p>
-
-<pre><code>Enter-PsSession myserver
-</code></pre>
-
-<p>Run a command on a list of remote machines:</p>
-
-<pre><code>Invoke-Command -computername myserver1, myserver2, myserver3 {get-Process}
-</code></pre>
-
-<p>I&#39;ll update this post as I learn more one-liners in Powershell</p>
+<ol>
+<li>Combine the water, sugar and kosher salt in the bowl of a stand mixer and sprinkle the yeast on top. Allow to sit for 5 minutes or until the mixture begins to foam. Add the flour and butter and, using the dough hook attachment, mix on low speed until well combined. Change to medium speed and knead until the dough is smooth and pulls away from the side of the bowl, approximately 4 to 5 minutes. Remove the dough from the bowl, clean the bowl and then oil it well with vegetable oil. Return the dough to the bowl, cover with plastic wrap and sit in a warm place for approximately 50 to 55 minutes or until the dough has doubled in size.</li>
+<li>Preheat the oven to 450 degrees F. Line 2 half-sheet pans with parchment paper and lightly brush with the vegetable oil. Set aside.</li>
+<li>Bring the 10 cups of water and the baking soda to a rolling boil in an 8-quart saucepan or roasting pan.</li>
+<li>In the meantime, turn the dough out onto a slightly oiled work surface and divide into 8 equal pieces. Roll out each piece of dough into a 24-inch rope. Make a U-shape with the rope, holding the ends of the rope, cross them over each other and press onto the bottom of the U in order to form the shape of a pretzel. Place onto the parchment-lined half sheet pan.</li>
+<li>Place the pretzels into the boiling water, 1 by 1, for 30 seconds. Remove them from the water using a large flat spatula. Return to the half sheet pan, brush the top of each pretzel with the beaten egg yolk and water mixture and sprinkle with the pretzel salt. Bake until dark golden brown in color, approximately 12 to 14 minutes. Transfer to a cooling rack for at least 5 minutes before serving.</li>
+</ol>
 
     </div>
     <ul class="tag_box inline">
@@ -110,29 +103,23 @@ Windows was suffocating me. <code>cmd</code> makes me want to rage quit, so don&
     <ul class="tag_box inline">
       <li><i class="icon-tags"></i></li>
       <li>
-        <a href="/blog/tags#powershell-ref">powershell <span>1</span></a>
+        <a href="/blog/tags#food-ref">food <span>7</span></a>
       </li>
       <li>
-        <a href="/blog/tags#one-liners-ref">one-liners <span>1</span></a>
+        <a href="/blog/tags#recipe-ref">recipe <span>7</span></a>
       </li>
       <li>
-        <a href="/blog/tags#cheatsheet-ref">cheatsheet <span>1</span></a>
-      </li>
-      <li>
-        <a href="/blog/tags#commands-ref">commands <span>1</span></a>
-      </li>
-      <li>
-        <a href="/blog/tags#windows-ref">windows <span>1</span></a>
+        <a href="/blog/tags#wiki-import-ref">wiki-import <span>7</span></a>
       </li>
     </ul>
     <hr>
     <div class="pagination">
       <ul>
-          <li class="prev"><a href="/blog/recipe-chicken-fajita-tortilla-soup" title="Recipe: Chicken Fajita Tortilla Soup">&larr; Previous</a></li>
+          <li class="prev"><a href="/blog/contemporary-clock-design" title="Contemporary clock design">&larr; Previous</a></li>
 
           <li><a href="/blog/archive">Archive</a></li>
 
-          <li class="next"><a href="/blog/recipe-%E8%B1%86%E7%93%A3%E8%8A%B9%E8%8F%9C%E7%82%92%E8%82%89%E7%B5%B2" title="Recipe: 豆瓣芹菜炒肉絲">Next &rarr;</a></li>
+          <li class="next disabled"><a>Next &rarr;</a>
       </ul>
     </div>
     <hr>
