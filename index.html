@@ -61,6 +61,37 @@
 <div class="row-fluid">
   <div class="span12">
     <div class="post">
+  <h3 class="title"><a href="/blog/powershell-one-liners">Powershell one-liners</a> <span class="date">2013-11-10</span></h3>
+
+  <div class="summary ellipsis">
+<p>Over the past year working at Microsoft, I've grown some appreciation of PowerShell. I live and
+breathe in Mac and Linux environments with a terminal console, so not having an equivalency in
+Windows was suffocating me. <code>cmd</code> makes me want to rage quit, so don't get me started.</p>
+
+<p>I came across this <a href="http://www.bashedupbits.com/2013/11/powershell-one-liners.html">gem</a>, and some will proof its usefulness </p>
+
+<p>Open <code>Document.pdf</code>, like <code>open</code> command in Mac.</p>
+
+<pre><code>Invoke-Item Document.pdf
+</code></pre>
+
+<p>Stop all processes with matching name (Chrome, in this case)</p>
+
+<pre><code>Stop-Process -processname chrome*
+</code></pre>
+
+<p>Find all "exe" files in a tree, list their full path, and sort "fullname":</p>
+
+<pre><code>Get-ChildItem 'C:\Tree\Of\Files\' -recurse -include *.exe | select-object fullname | sort fullname | more
+</code></pre>
+
+</div>
+
+  <div class="more">
+    <a href="/blog/powershell-one-liners" class="btn btn-small">read more..</a>
+  </div>
+</div>
+<div class="post">
   <h3 class="title"><a href="/blog/contemporary-clock-design">Contemporary clock design</a> <span class="date">2013-11-10</span></h3>
 
   <div class="summary">
@@ -71,6 +102,10 @@ are converging, but not quite. Like 11:58.</p>
 <p>Neat design though.</p>
 
 <p><img src="http://i.imgur.com/B2CqP4I.jpg" alt="clock design"></p>
+
+<p>In the comments, I came across this youtube. These ideas to liven your space are simple yet functional. I have a few empty glass bottles laying around, so I'm definitely giving the second idea a try.</p>
+
+<iframe width="640" height="390" src="//www.youtube.com/embed/J5Vr9Rs8fBs" frameborder="0" allowfullscreen></iframe>
 </div>
 
   <div class="more">

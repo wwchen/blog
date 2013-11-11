@@ -6,6 +6,49 @@
     <link>http://sample.com</link>
     <pubDate>2013-11-10</pubDate>
     <item>
+      <title>Powershell one-liners</title>
+      <link>http://sample.com/blog/powershell-one-liners</link>
+      <pubDate>2013-11-10</pubDate>
+      <description>&lt;p&gt;Over the past year working at Microsoft, I&amp;#39;ve grown some appreciation of PowerShell. I live and
+breathe in Mac and Linux environments with a terminal console, so not having an equivalency in
+Windows was suffocating me. &lt;code&gt;cmd&lt;/code&gt; makes me want to rage quit, so don&amp;#39;t get me started.&lt;/p&gt;
+
+&lt;p&gt;I came across this &lt;a href="http://www.bashedupbits.com/2013/11/powershell-one-liners.html"&gt;gem&lt;/a&gt;, and some will proof its usefulness &lt;/p&gt;
+
+&lt;p&gt;Open &lt;code&gt;Document.pdf&lt;/code&gt;, like &lt;code&gt;open&lt;/code&gt; command in Mac.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Invoke-Item Document.pdf
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Stop all processes with matching name (Chrome, in this case)&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Stop-Process -processname chrome*
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Find all &amp;quot;exe&amp;quot; files in a tree, list their full path, and sort &amp;quot;fullname&amp;quot;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Get-ChildItem &amp;#39;C:\Tree\Of\Files\&amp;#39; -recurse -include *.exe | select-object fullname | sort fullname | more
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Find all mp3s and sort by ascending size:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Get-ChildItem &amp;#39;C:\Tree\Of\Files\&amp;#39; -recurse -include *.mp3 | select-object fullname,length | sort length
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Start an interactive PowerShell session on the remote computer myserver:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Enter-PsSession myserver
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Run a command on a list of remote machines:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Invoke-Command -computername myserver1, myserver2, myserver3 {get-Process}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I&amp;#39;ll update this post as I learn more one-liners in Powershell&lt;/p&gt;
+</description>
+    </item>
+    <item>
       <title>Contemporary clock design</title>
       <link>http://sample.com/blog/contemporary-clock-design</link>
       <pubDate>2013-11-10</pubDate>
@@ -16,6 +59,10 @@ are converging, but not quite. Like 11:58.&lt;/p&gt;
 &lt;p&gt;Neat design though.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src="http://i.imgur.com/B2CqP4I.jpg" alt="clock design"&gt;&lt;/p&gt;
+
+&lt;p&gt;In the comments, I came across this youtube. These ideas to liven your space are simple yet functional. I have a few empty glass bottles laying around, so I&amp;#39;m definitely giving the second idea a try.&lt;/p&gt;
+
+&lt;iframe width="640" height="390" src="//www.youtube.com/embed/J5Vr9Rs8fBs" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 </description>
     </item>
     <item>

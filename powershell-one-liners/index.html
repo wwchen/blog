@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Contemporary clock design</title>
+    <title>Powershell one-liners</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="William Chen">
 
@@ -56,7 +56,7 @@
       <div class="content">
         
 <div class="page-header">
-  <h1>Contemporary clock design </h1>
+  <h1>Powershell one-liners </h1>
 </div>
 
 <div class="row-fluid post-full">
@@ -65,17 +65,43 @@
       <span>2013-11-10</strong>
     </div>
     <div class="content">
-      <p>Saw <a href="http://www.coroflot.com/nazar-sigaher/frame-clock">this</a> on <a href="http://www.reddit.com/r/pics/comments/1qahu1/i_want_this/">Reddit</a>, now I&#39;m considering this as my next project to do.
-But as some of the commenters have pointed out, the OCD inside me will twitch every time the hands
-are converging, but not quite. Like 11:58.</p>
+      <p>Over the past year working at Microsoft, I&#39;ve grown some appreciation of PowerShell. I live and
+breathe in Mac and Linux environments with a terminal console, so not having an equivalency in
+Windows was suffocating me. <code>cmd</code> makes me want to rage quit, so don&#39;t get me started.</p>
 
-<p>Neat design though.</p>
+<p>I came across this <a href="http://www.bashedupbits.com/2013/11/powershell-one-liners.html">gem</a>, and some will proof its usefulness </p>
 
-<p><img src="http://i.imgur.com/B2CqP4I.jpg" alt="clock design"></p>
+<p>Open <code>Document.pdf</code>, like <code>open</code> command in Mac.</p>
 
-<p>In the comments, I came across this youtube. These ideas to liven your space are simple yet functional. I have a few empty glass bottles laying around, so I&#39;m definitely giving the second idea a try.</p>
+<pre><code>Invoke-Item Document.pdf
+</code></pre>
 
-<iframe width="640" height="390" src="//www.youtube.com/embed/J5Vr9Rs8fBs" frameborder="0" allowfullscreen></iframe>
+<p>Stop all processes with matching name (Chrome, in this case)</p>
+
+<pre><code>Stop-Process -processname chrome*
+</code></pre>
+
+<p>Find all &quot;exe&quot; files in a tree, list their full path, and sort &quot;fullname&quot;:</p>
+
+<pre><code>Get-ChildItem &#39;C:\Tree\Of\Files\&#39; -recurse -include *.exe | select-object fullname | sort fullname | more
+</code></pre>
+
+<p>Find all mp3s and sort by ascending size:</p>
+
+<pre><code>Get-ChildItem &#39;C:\Tree\Of\Files\&#39; -recurse -include *.mp3 | select-object fullname,length | sort length
+</code></pre>
+
+<p>Start an interactive PowerShell session on the remote computer myserver:</p>
+
+<pre><code>Enter-PsSession myserver
+</code></pre>
+
+<p>Run a command on a list of remote machines:</p>
+
+<pre><code>Invoke-Command -computername myserver1, myserver2, myserver3 {get-Process}
+</code></pre>
+
+<p>I&#39;ll update this post as I learn more one-liners in Powershell</p>
 
     </div>
     <ul class="tag_box inline">
@@ -84,29 +110,29 @@ are converging, but not quite. Like 11:58.</p>
     <ul class="tag_box inline">
       <li><i class="icon-tags"></i></li>
       <li>
-        <a href="/blog/tags#todo-ref">todo <span>1</span></a>
+        <a href="/blog/tags#powershell-ref">powershell <span>1</span></a>
       </li>
       <li>
-        <a href="/blog/tags#project-ref">project <span>2</span></a>
+        <a href="/blog/tags#one-liners-ref">one-liners <span>1</span></a>
       </li>
       <li>
-        <a href="/blog/tags#clock-ref">clock <span>1</span></a>
+        <a href="/blog/tags#cheatsheet-ref">cheatsheet <span>1</span></a>
       </li>
       <li>
-        <a href="/blog/tags#contemporary-ref">contemporary <span>1</span></a>
+        <a href="/blog/tags#commands-ref">commands <span>1</span></a>
       </li>
       <li>
-        <a href="/blog/tags#design-ref">design <span>1</span></a>
+        <a href="/blog/tags#windows-ref">windows <span>1</span></a>
       </li>
     </ul>
     <hr>
     <div class="pagination">
       <ul>
-          <li class="prev"><a href="/blog/high-winds-at-seattle-this-morning" title="High winds at Seattle this morning">&larr; Previous</a></li>
+          <li class="prev"><a href="/blog/contemporary-clock-design" title="Contemporary clock design">&larr; Previous</a></li>
 
           <li><a href="/blog/archive">Archive</a></li>
 
-          <li class="next"><a href="/blog/powershell-one-liners" title="Powershell one-liners">Next &rarr;</a></li>
+          <li class="next disabled"><a>Next &rarr;</a>
       </ul>
     </div>
     <hr>
